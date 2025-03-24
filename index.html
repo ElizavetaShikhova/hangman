@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Виселица</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media-queries.css" />
+</head>
+<body>
+  <header>
+    <h1>Виселица</h1>
+  </header>
+
+  <main>
+    <section class="start-screen">
+      <h2>Выбери количество жизней</h2>
+      <select id="life-select">
+        <option value="6">6 жизней</option>
+        <option value="7">7 жизней</option>
+        <option value="8" selected>8 жизней</option>
+        <option value="9">9 жизней</option>
+      </select>
+      <button id="start-btn">Старт</button>
+    </section>
+
+    <section class="game-screen hidden">
+      <canvas id="hangman-canvas" width="400" height="400"></canvas>
+      <div id="word-display"></div>
+      <div id="keyboard"></div>
+      <div id="result-display"></div>
+      <button id="reset-btn">Назад</button>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
