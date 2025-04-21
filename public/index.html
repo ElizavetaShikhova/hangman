@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, user-scalable=no">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media-queries.css">
+  <script src="script.js" de></script>
+</head>
+<body>
+<button id="back" class="nactive" onclick="change2()">Назад &#8617;</button>
+<div>
+  <h1 class="nactive" id="gallow">Виселица</h1>
+  <h1 class="active" id="gallow1">Виселица</h1>
+  <h2 id="choose_lifes" class="active">Выбери количество жизней</h2>
+  <select id="select" name="select" class="active">
+    <option value="8">8 жизней</option>
+    <option value="7">7 жизней</option>
+    <option value="6">6 жизней</option>
+    <option value="9">9 жизней</option>
+  </select>
+
+  <h1><div id="word" class="nactive"></div> </h1>
+  <h1><div id="result" class="nactive"></div> </h1>
+</div>
+<button id="change" onclick="change()">Старт</button>
+<canvas height='500' width='442' id='hangman' class="nactive"></canvas>
+<table width="auto"  id="table" class="nactive">
+  <tr>
+    <td><button class='button' id="а">А</button></td>
+    <td><button class='button' id="б">Б</button></td>
+    <td><button class='button' id="в">В</button></td>
+    <td><button class='button' id="г">Г</button></td>
+    <td><button class='button' id="д">Д</button></td>
+    <td><button class='button' id="е">Е</button></td>
+    <td><button class='button' id="ё">Ё</button></td>
+    <td><button class='button' id="ж">Ж</button></td>
+    <td><button class='button' id="з">З</button></td>
+    <td><button class='button' id="и">И</button></td>
+    <td><button class='button' id="й">Й</button></td>
+  </tr>
+  <tr>
+    <td><button class='button' id="к">К</button></td>
+    <td><button class='button' id="л">Л</button></td>
+    <td><button class='button' id="м">М</button></td>
+    <td><button class='button' id="н">Н</button></td>
+    <td><button class='button' id="о">О</button></td>
+    <td><button class='button' id="п">П</button></td>
+    <td><button class='button' id="р">Р</button></td>
+    <td><button class='button' id="с">С</button></td>
+    <td><button class='button' id="т">Т</button></td>
+    <td><button class='button' id="у">У</button></td>
+    <td><button class='button' id="ф">Ф</button></td>
+  </tr>
+  <tr>
+    <td><button class='button' id="х">Х</button></td>
+    <td><button class='button' id="ц">Ц</button></td>
+    <td><button class='button' id="ч">Ч</button></td>
+    <td><button class='button' id="ш">Ш</button></td>
+    <td><button class='button' id="щ">Щ</button></td>
+    <td><button class='button' id="ъ">Ъ</button></td>
+    <td><button class='button' id="ы">Ы</button></td>
+    <td><button class='button' id="ь">Ь</button></td>
+    <td><button class='button' id="э">Э</button></td>
+    <td><button class='button' id="ю">Ю</button></td>
+    <td><button class='button' id="я">Я</button></td>
+  </tr>
+</table>
+<table width="auto"  id="table2" class="nactive">
+  <tr>
+    <td><button class='button' id="а2">А</button></td>
+    <td><button class='button' id="б2">Б</button></td>
+    <td><button class='button' id="в2">В</button></td>
+    <td><button class='button' id="г2">Г</button></td>
+    <td><button class='button' id="д2">Д</button></td>
+    <td><button class='button' id="е2">Е</button></td>
+    <td><button class='button' id="ё2">Ё</button></td>
+  </tr>
+  <tr>
+    <td><button class='button' id="ж2">Ж</button></td>
+    <td><button class='button' id="з2">З</button></td>
+    <td><button class='button' id="и2">И</button></td>
+    <td><button class='button' id="й2">Й</button></td>
+    <td><button class='button' id="к2">К</button></td>
+    <td><button class='button' id="л2">Л</button></td>
+    <td><button class='button' id="м2">М</button></td>
+  </tr>
+  <tr>
+    <td><button class='button' id="н2">Н</button></td>
+    <td><button class='button' id="о2">О</button></td>
+    <td><button class='button' id="п2">П</button></td>
+    <td><button class='button' id="р2">Р</button></td>
+    <td><button class='button' id="с2">С</button></td>
+    <td><button class='button' id="т2">Т</button></td>
+    <td><button class='button' id="у2">У</button></td>
+  </tr>
+  <tr>
+    <td><button class='button' id="ф2">Ф</button></td>
+    <td><button class='button' id="х2">Х</button></td>
+    <td><button class='button' id="ц2">Ц</button></td>
+    <td><button class='button' id="ч2">Ч</button></td>
+    <td><button class='button' id="ш2">Ш</button></td>
+    <td><button class='button' id="щ2">Щ</button></td>
+    <td><button class='button' id="ъ2">Ъ</button></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><button class='button' id="ы2">Ы</button></td>
+    <td><button class='button' id="ь2">Ь</button></td>
+    <td><button class='button' id="э2">Э</button></td>
+    <td><button class='button' id="ю2">Ю</button></td>
+    <td><button class='button' id="я2">Я</button></td>
+    <td></td>
+  </tr>
+</table>
+</body>
+</html>

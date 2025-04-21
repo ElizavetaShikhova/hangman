@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+
+*{
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    position: relative;
+    text-align: center;
+    margin: 2px;
+}
+
+#word{
+    position:relative;
+    top:19%;
+    color: #000080;
+    font-size: 150%;
+
+}
+body{
+    font-family: 'Kelly Slab', cursive;
+    width: auto;
+    background-image: url("https://interyerus.ru/f/product/364023.jpg")
+}
+
+#hangman {
+    position: relative;
+    margin: 0 auto;
+}
+
+.button {
+    position:relative;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 9px #999;
+    margin-left:50%;
+    margin-top:50%;}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.button:disabled{
+    background-color: rgb(114, 110, 110);
+    transform: translateY(4px);
+}
+
+
+table {
+    position: relative;
+    left:-4%;
+    padding-top:0px;
+}
+
+.nactive{
+    display:none;
+}
+
+.active{
+    display:flex;
+}
+
+#change{
+    position: relative;
+    top:200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-color: #4bb84f;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 40px 40px #4bb84f inset, 0 0 0 0 #4bb84f;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0.9em;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 28px;
+    line-height: 1;
+    margin: 0;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+#change:hover {
+    box-shadow: 0 0 10px 0 #4bb84f inset, 0 0 10px 4px #4bb84f;}
+
+#gallow1{
+    top: 35%;
+    position:static;
+    font-size:90px
+}
+
+#back{
+    position: fixed;
+    padding: 8px 13px;
+    float:left;
+    z-index:10;
+    border-radius: 0.9em;
+    cursor: pointer;
+    color:#000080;
+    border:2px solid black;
+    background-color:rgb(245, 245, 245);
+    font-size: 23px;
+}
+
+#choose_lifes{
+    text-align: center;
+    font-size:37px;
+    top:40%;
+    color:#000080;
+    margin:33px;
+}
+
+select{
+    font: inherit;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 35px;
+    color:#000080;
+    font-style:oblique;
+    background-color: rgb(241, 241, 241);
+}
