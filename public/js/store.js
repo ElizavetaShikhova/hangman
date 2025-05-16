@@ -3,5 +3,6 @@ export const state = {
     lifesInit: 8,
     secret: '',
     guess: [],
-    flag: true
+    flag: true,
+    name: ''
 }

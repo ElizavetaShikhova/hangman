@@ -1,5 +1,5 @@
 import { state } from './store.js'
-import { bindLetterButtons, resetButtons } from './ui.js'
+import { bindLetterButtons, resetButtons, showScores } from './ui.js'
 import { fetchWord } from './helpers.js'
 import { updateWord, updateLives, checkGameState, change, change2 } from './ui.js'
 import { drawInitialGallow } from './draw.js'
@@ -12,13 +12,13 @@ export async function initGame() {
     bindLetterButtons()
     document.getElementById('change').onclick = startGame
     document.getElementById('back').onclick = change2
-
-    await startGame()
+    document.getElementById('show-scores').onclick = showScores
 }
 
 export async function startGame() {
     const select = document.getElementById('select')
     const selected = +select.value
+    state.name = document.getElementById('input_name').value.trim() || 'Аноним'
     state.lifes = selected === -1 ? 8 : selected
     state.lifesInit = state.lifes
 
