@@ -7,10 +7,10 @@
   <title>Hangman</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="media-queries.css">
-  <script src="script.js" de></script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
-<button id="back" class="nactive" onclick="change2()">Назад &#8617;</button>
+<button id="back" class="nactive">Назад &#8617;</button>
 <div>
   <h1 class="nactive" id="gallow">Виселица</h1>
   <h1 class="active" id="gallow1">Виселица</h1>
@@ -25,7 +25,7 @@
   <h1><div id="word" class="nactive"></div> </h1>
   <h1><div id="result" class="nactive"></div> </h1>
 </div>
-<button id="change" onclick="change()">Старт</button>
+<button id="change">Старт</button>
 <canvas height='500' width='442' id='hangman' class="nactive"></canvas>
 <table width="auto"  id="table" class="nactive">
   <tr>
